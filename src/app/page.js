@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
-import { createSupabaseClient } from '@/supabase-utils/client';
+import { getSupabaseBrowserClient } from '@/supabase-utils/browserClient';
 
 export default function Home() {
   useEffect(() => {
-    const supabase = createSupabaseClient();
+    const supabase = getSupabaseBrowserClient();
     supabase.storage.listBuckets().then((result) => {
       console.log("Bucket List", result)
     });
