@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import { getSupabaseBrowserClient } from '@/supabase-utils/browserClient';
+import styles from "./page.module.css";
 
 export default function Home() {
   useEffect(() => {
@@ -13,10 +14,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <main>
+    <div className={styles.page}>
+      <main className={styles.main}>
         <Image
-          className="dark:invert"
+          className={styles.logo}
           src="/next.svg"
           alt="Next.js logo"
           width={180}
@@ -25,11 +26,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing{" "}
-            <code>
-              src/app/page.js
-            </code>
-            .
+            Get started by editing <code>src/app/page.js</code>.
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
