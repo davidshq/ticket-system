@@ -10,7 +10,7 @@ export default function Nav() {
           <Link role="button" href="/tickets/new">New Ticket</Link>
         </li>
         <li>
-          <Link role="button" href="/tickets/users">SUser List</Link>
+          <Link role="button" href="/tickets/users">User List</Link>
         </li>
       </ul>
       <ul>
